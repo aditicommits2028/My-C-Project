@@ -15,7 +15,7 @@ void bill(char names[][100], int prices[], int quantities[], int count)
     int i;
     float subtotal = 0, discount, gstamt, finalbill;
 
-    printf("\n========== GROCERY BILL ==========\n");
+    printf("\n    GROCERY BILL    \n");
     printf("%s %s %s\n", "Product", "Quantity", "Amount");
 
     for (i = 0; i < count; i++)
@@ -36,12 +36,10 @@ void bill(char names[][100], int prices[], int quantities[], int count)
     gstamt = subtotal * 5 / 100.0;
     finalbill = subtotal + gstamt;
 
-    printf("----------------------------------\n");
     printf("Amount after discount: Rs. %.2f\n", subtotal);
     printf("Discount:              Rs. %.2f\n", discount);
     printf("GST (5%%):              Rs. %.2f\n", gstamt);
     printf("Final Bill:            Rs. %.2f\n", finalbill);
-    printf("==================================\n");
 }
 
 int main()
